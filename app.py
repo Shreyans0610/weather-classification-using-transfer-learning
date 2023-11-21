@@ -12,7 +12,7 @@ from tensorflow.keras.preprocessing import image
 import numpy as np
 
 def predict_model(img):
-    model =  load_model('wcv.h5')
+    model =  load_model('weathermodel.h5')
     x = image.img_to_array(img)
     x = np.expand_dims(x,axis = 0)
     preds = model.predict(x)
